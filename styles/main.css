@@ -1,0 +1,65 @@
+.header {
+  font-size: 2rem;
+  margin-top: 5%;
+}
+
+.button {
+  width: 340px;
+  height: 105px;
+
+  margin: 5% auto;
+
+  position: relative;
+  z-index: 2;
+
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.button.anim {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+.ball {
+  position: absolute;
+}
+
+.one {
+  top: 15%;
+  left: -20%;
+
+  transition: left 0.3s ease;
+}
+
+.two {
+  bottom: 15%;
+  left: -20%;
+
+  transition: left 0.3s ease 0.3s;
+}
+
+.three {
+  top: 15%;
+  right: -20%;
+
+  transition: right 0.3s ease 0.3s;
+}
+
+.four {
+  bottom: 15%;
+  right: -20%;
+
+  transition: right 0.3s ease;
+}
+
+@media screen and (min-height: 500px) {
+  .header {
+    margin-top: 20%;
+  }
+}
+
+@media screen and (min-height: 780px) {
+  html {
+    font-size: 36px;
+  }
+}
