@@ -4,6 +4,7 @@ setBalanceField()
 activateAudio()
 
 let wheel = document.querySelector('.wheel')
+let outerWheel = document.querySelector('.outer_wheel')
 let green = document.querySelector('.green')
 let balance = document.querySelector('.balance')
 let wrapper = document.querySelector('.wrapper')
@@ -54,7 +55,7 @@ let currentUnluckyCoords = 0
 let currentLuckyCoords = 0
 let currentBall = 0
 
-wheel.style.height = wheel.clientWidth + 'px'
+outerWheel.style.height = outerWheel.clientWidth + 'px'
 
 for (let i = 0; i < ballCoords.length; i++) {
     let ball = document.createElement('div')
@@ -82,7 +83,7 @@ for (let i = 0; i < lightCoords.length; i++) {
     redInnerLight.classList.add('red_light', 'hidden')
 
     light.append(redInnerLight, innerLight)
-    wheel.appendChild(light)
+    outerWheel.appendChild(light)
 }
 
 for (let i = 0; i < 5; i++) {
@@ -133,6 +134,8 @@ green.onclick = async () => {
         setGreen('game')
 
         changeBalance(-350)
+
+        wheel.style.animation = 'rotate 6s linear infinite'
     }
 
     let num = order[currentBall]
